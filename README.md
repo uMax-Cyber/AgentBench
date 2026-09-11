@@ -1,4 +1,5 @@
 # CLI Tool Testing Harness
+[![CI](https://github.com/uMax-Cyber/AgentBench/actions/workflows/ci.yml/badge.svg)](https://github.com/uMax-Cyber/AgentBench/actions/workflows/ci.yml)
 
 Automated testing framework for AI agents that use CLI tools / MCP servers against real infrastructure. 36-test suite covering tool invocation, error handling, safety guards, and anti-hallucination — with automatic grading.
 
