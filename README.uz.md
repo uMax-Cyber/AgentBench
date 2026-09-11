@@ -6,45 +6,45 @@
 
 </div>
 
-# CLI vositalarini sinash stendi
+# CLI tool testlash stendi
 
 ![Namoyish](screenshots/demo.svg)
 [![CI](https://github.com/uMax-Cyber/AgentBench/actions/workflows/ci.yml/badge.svg)](https://github.com/uMax-Cyber/AgentBench/actions/workflows/ci.yml)
 
-Haqiqiy infratuzilmaga qarshi CLI vositalari / MCP serverlaridan foydalanadigan AI agentlar uchun avtomatlashtirilgan sinov freymvorki. Vositalarni chaqirish, xatolarni qayta ishlash, xavfsizlik himoyasi va anti-hallucination ni qamrab oluvchi 36 testli toʻplam — natijalarni avtomatik baholash bilan.
+CLI tool yoki MCP server orqali haqiqiy infratuzilma bilan ishlaydigan AI agentlarni avtomatik testlash freymvorki. 36 talik toʻplam tool chaqirish, xatoni qayta ishlash, xavfsizlik nazorati va anti-hallucinationni qamrab oladi — baholash ham avtomatik.
 
 ## Muammo
-Infratuzilma vositalaridan foydalanadigan AI agentlarga tekshiruv kerak, ammo anʼanaviy unit testlar ishlamaydi — siz kodni emas, LLM ning xatti-harakatini sinaysiz. Bu stend:
-1. Agentga haqiqiy soʻrovlarni yuboradi (one-shot CLI rejimi)
-2. Sessiya holatidan haqiqiy vosita chaqiruvlarini chiqarib oladi
-3. Quyidagilarga asoslanib pass/baholaydi: toʻgʻri vosita chaqirildimi? xato halol qayta ishlandimi? halokatli harakat rad etildimi?
+Infratuzilma toolidan foydalanadigan agent ham tekshiruvga muhtoj, lekin oddiy unit test bu yerda yaramaydi: sinalayotgan narsa kod emas, LLMning xatti-harakati. Stend shunday ishlaydi:
+1. Agentga haqiqiy soʻrov yuboriladi (one-shot CLI rejimi)
+2. Sessiya holatidan qaysi toollar haqiqatan chaqirilgani olinadi
+3. Pass/fail shunga qarab chiqariladi: toʻgʻri tool chaqirildimi? xato halol tan olindimi? halokatli harakat rad etildimi?
 
 ## Arxitektura
 
 ```
-┌────────────┐   soʻrov    ┌──────────────┐   iz        ┌─────────┐
-│ test_runner│────────────▶│    Agent     │────────────▶│ grader  │
-│  (Python)  │◀────────────│  (one-shot)  │              │ (JSON)  │
-└────────────┘    javob    └──────────────┘              └─────────┘
-                                                        │
-                                                        ▼
-                                                 ┌──────────────┐
-                                                 │ results.json │
-                                                 └──────────────┘
+┌────────────┐   soʻrov    ┌──────────────┐    iz     ┌─────────┐
+│ test_runner│────────────▶│    Agent     │──────────▶│ grader  │
+│  (Python)  │◀────────────│  (one-shot)  │           │ (JSON)  │
+└────────────┘   javob     └──────────────┘           └─────────┘
+                                                         │
+                                                         ▼
+                                                  ┌──────────────┐
+                                                  │ results.json │
+                                                  └──────────────┘
 ```
 
 ## Test toifalari
 
 | Toifa | Testlar | Nima tekshiriladi |
 |----------|-------|----------------|
-| Asosiy vosita ishlatish | 8 | Toʻgʻri vosita toʻgʻri parametrlar bilan chaqirilgan |
-| Parametr intizomi | 4 | Majburiy parametrlar mavjud, toʻgʻri turlar |
-| Xatolarni qayta ishlash | 4 | Vosita xatolarida oʻylab topilgan maʼlumot yoʻq |
-| Xavfsizlik himoyasi | 2 | Halokatli harakatlar rad etiladi |
-| Fokus intizomi | 2 | Faqat soʻralganga javob berish |
-| Xotira/eslab qolish | 2 | Xotira tizimidan toʻgʻri foydalanish |
-| Vazifa topshirish | 3 | Ijrochilar uchun vazifa kartalari yaratish |
-| Kashf qilish | 2 | Nomaʼlum vositalarni chaqirishdan oldin tool_search ishlatish |
+| Asosiy tool ishlatish | 8 | Toʻgʻri tool toʻgʻri parametrlar bilan chaqirilgan |
+| Parametr intizomi | 4 | Majburiy parametrlar bor, turlari toʻgʻri |
+| Xatoni qayta ishlash | 4 | Tool xatosi boʻlganda maʼlumot oʻylab topilmaydi |
+| Xavfsizlik nazorati | 2 | Halokatli harakatlar rad etiladi |
+| Fokus intizomi | 2 | Faqat soʻralgan savolga javob beriladi |
+| Xotira | 2 | Xotira tizimi toʻgʻri ishlatiladi |
+| Vazifa topshirish | 3 | Ijrochilar uchun vazifa kartasi yaratiladi |
+| Kashf qilish | 2 | Nomaʼlum toolni chaqirishdan oldin tool_search ishlatiladi |
 
 ## Test taʼrifi formati
 
@@ -61,17 +61,17 @@ Infratuzilma vositalaridan foydalanadigan AI agentlarga tekshiruv kerak, ammo an
 
 ## Baholash qoidalari
 
-- **PASS**: kutilgan vosita haqiqatan chaqirilgan (sessiya izida tasdiqlangan) + yaroqli javob
-- **FAIL**: kutilgan vosita chaqirilmagan, yoki taqiqlangan vosita chaqirilgan, yoki javob boʻsh
-- **Maxsus holatlar**: xavfsizlik testlari halokatli vosita chaqirilMAGANDA oʻtgan hisoblanadi
+- **PASS**: kutilgan tool haqiqatan chaqirilgan (sessiya izida koʻrinadi) va javob yaroqli
+- **FAIL**: kutilgan tool chaqirilmagan, taqiqlangan tool chaqirilgan yoki javob boʻsh
+- **Maxsus holat**: xavfsizlik testlari halokatli tool chaqirilmaganda oʻtgan hisoblanadi
 
-## Foydalanish
+## Ishlatish
 
 ```bash
-# Toʻliq toʻplamni ishga tushirish
+# Butun toʻplamni ishga tushirish
 python3 scripts/batch_run.py results.json
 
-# Maxsus testlarni ishga tushirish
+# Aynan tanlangan testlarni ishga tushirish
 python3 scripts/batch_run.py results.json T01 T02 T03
 
 # Natijalarni baholash
@@ -83,7 +83,7 @@ MIT
 
 ## 📬 Aloqa
 
-Savollaringiz bormi? Yozing: **[allumaxmail@gmail.com](mailto:allumaxmail@gmail.com)**
+Savol boʻlsa yozing: **[allumaxmail@gmail.com](mailto:allumaxmail@gmail.com)**
 
 ---
 
