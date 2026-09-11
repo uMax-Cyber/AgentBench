@@ -78,3 +78,15 @@ python3 scripts/grader.py results.json
 
 ## License
 MIT
+
+## 📬 Contact
+
+Questions? Reach out: **[allumaxmail@gmail.com](mailto:allumaxmail@gmail.com)**
+
+---
+
+<div align="center">
+
+**🇬🇧 [English](README.md) · 🇷🇺 [Русский](README.ru.md) · 🇺🇿 [Oʻzbekcha](README.uz.md)**
+
+</div>
