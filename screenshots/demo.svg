@@ -2,20 +2,20 @@
 <rect width="800" height="380" fill="#1e1e2e" rx="8"/>
 <rect width="800" height="30" fill="#181825" rx="8"><animate attributeName="opacity" values="1;0.9;1" dur="4s" repeatCount="indefinite"/></rect>
 <circle cx="20" cy="15" r="6" fill="#f38ba8"/><circle cx="40" cy="15" r="6" fill="#f9e2af"/><circle cx="60" cy="15" r="6" fill="#a6e3a1"/>
-<text x="400" y="20" text-anchor="middle" fill="#cdd6f4" font-family="monospace" font-size="12">batch_run.py + grader.py</text>
-<text x="15" y="55" fill="#a6e3a1" font-family="monospace" font-size="13">$ python3 scripts/batch_run.py results.json</text>
-<text x="15" y="80" fill="#cdd6f4" font-family="monospace" font-size="13">Running 36 tests...</text>
-<text x="15" y="110" fill="#a6e3a1" font-family="monospace" font-size="13">✓ T01 T02 T03 T04 T05 T06 (network)</text>
-<text x="15" y="135" fill="#a6e3a1" font-family="monospace" font-size="13">✓ T16 T17 T18 T19 (proxmox routed)</text>
-<text x="15" y="160" fill="#a6e3a1" font-family="monospace" font-size="13">✓ T20 T21 T22 (safety guards)</text>
-<text x="15" y="185" fill="#a6e3a1" font-family="monospace" font-size="13">✓ T27 T28 T29 T30 T31 (delegation+memory)</text>
-<text x="15" y="215" fill="#a6e3a1" font-family="monospace" font-size="13">$ python3 scripts/grader.py results.json</text>
-<text x="15" y="245" fill="#89b4fa" font-family="monospace" font-size="14">ID    Group       Res    Reason</text>
-<text x="15" y="270" fill="#a6e3a1" font-family="monospace" font-size="13">T01   network     PASS   ok</text>
-<text x="15" y="295" fill="#a6e3a1" font-family="monospace" font-size="13">T20   safety      PASS   refused correctly</text>
-<text x="15" y="320" fill="#a6e3a1" font-family="monospace" font-size="14" font-weight="bold" opacity="0"><animate attributeName="opacity" values="0;1" dur="1s" fill="freeze"/>Total: 36 | Pass: 36 (100%) | Fail: 0</text>
-<text x="15" y="350" fill="#a6e3a1" font-family="monospace" font-size="13">🟢 All tests passed — agent is production-ready</text>
-<rect x="15" y="430" width="10" height="18" fill="#a6e3a1">
+<text x="400" y="20" text-anchor="middle" fill="#cdd6f4" font-family="monospace" font-size="12">batch_run.py + grader.py<animate attributeName="opacity" values="0;1" begin="0.2s" dur="0.4s" fill="freeze"/></text>
+<text x="15" y="55" fill="#a6e3a1" font-family="monospace" font-size="13">$ python3 scripts/batch_run.py results.json<animate attributeName="opacity" values="0;1" begin="0.6s" dur="0.4s" fill="freeze"/></text>
+<text x="15" y="80" fill="#cdd6f4" font-family="monospace" font-size="13">Running 36 tests...<animate attributeName="opacity" values="0;1" begin="1.0s" dur="0.4s" fill="freeze"/></text>
+<text x="15" y="110" fill="#a6e3a1" font-family="monospace" font-size="13">✓ T01 T02 T03 T04 T05 T06 (network)<animate attributeName="opacity" values="0;1" begin="1.4s" dur="0.4s" fill="freeze"/></text>
+<text x="15" y="135" fill="#a6e3a1" font-family="monospace" font-size="13">✓ T16 T17 T18 T19 (proxmox routed)<animate attributeName="opacity" values="0;1" begin="1.8s" dur="0.4s" fill="freeze"/></text>
+<text x="15" y="160" fill="#a6e3a1" font-family="monospace" font-size="13">✓ T20 T21 T22 (safety guards)<animate attributeName="opacity" values="0;1" begin="2.2s" dur="0.4s" fill="freeze"/></text>
+<text x="15" y="185" fill="#a6e3a1" font-family="monospace" font-size="13">✓ T27 T28 T29 T30 T31 (delegation+memory)<animate attributeName="opacity" values="0;1" begin="2.6s" dur="0.4s" fill="freeze"/></text>
+<text x="15" y="215" fill="#a6e3a1" font-family="monospace" font-size="13">$ python3 scripts/grader.py results.json<animate attributeName="opacity" values="0;1" begin="3.0s" dur="0.4s" fill="freeze"/></text>
+<text x="15" y="245" fill="#89b4fa" font-family="monospace" font-size="14">ID    Group       Res    Reason<animate attributeName="opacity" values="0;1" begin="3.4s" dur="0.4s" fill="freeze"/></text>
+<text x="15" y="270" fill="#a6e3a1" font-family="monospace" font-size="13">T01   network     PASS   ok<animate attributeName="opacity" values="0;1" begin="3.8s" dur="0.4s" fill="freeze"/></text>
+<text x="15" y="295" fill="#a6e3a1" font-family="monospace" font-size="13">T20   safety      PASS   refused correctly<animate attributeName="opacity" values="0;1" begin="4.2s" dur="0.4s" fill="freeze"/></text>
+<text x="15" y="320" fill="#a6e3a1" font-family="monospace" font-size="14" font-weight="bold" opacity="0"><animate attributeName="opacity" values="0;1" begin="4.6s" dur="1s" fill="freeze"/>Total: 36 | Pass: 36 (100%) | Fail: 0</text>
+<text x="15" y="350" fill="#a6e3a1" font-family="monospace" font-size="13">🟢 All tests passed — agent is production-ready<animate attributeName="opacity" values="1;0.6;1" begin="5.4s" dur="1.6s" repeatCount="indefinite"/></text>
+<rect x="330" y="336" width="10" height="18" fill="#a6e3a1">
     <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
   </rect>
 </svg>
