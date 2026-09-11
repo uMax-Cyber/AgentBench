@@ -1,3 +1,5 @@
+[English](README.md) | [Русский](README.ru.md)
+
 # CLI Tool Testing Harness
 [![CI](https://github.com/uMax-Cyber/AgentBench/actions/workflows/ci.yml/badge.svg)](https://github.com/uMax-Cyber/AgentBench/actions/workflows/ci.yml)
 
